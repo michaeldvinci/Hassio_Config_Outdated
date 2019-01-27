@@ -1,11 +1,32 @@
-# Default_view:
-#   name: DEFAULT
-#   view: yes
-#   icon: mdi:home
-#   entities:
-#     - group.bathroom_lights
+default_view:
+  name: Home
+  view: yes
+  icon: mdi:home
+  entities:
+    - media_player.apartment
+    - media_player.yamaha_receiver
+    - group.august
+    - group.living_room_multi
+    - group.living_room_lights
+    - group.late_lights
+    - group.right_side_lights
+bathroom:
+  name: Bathroom
+  view: yes
+  icon: mdi:human-male-female
+  entities:
+    - group.bathroom_multi
+    - group.bathroom_motion
+    - group.bathroom_lights
+kitchen:
+  name: Kitchen
+  view: yes
+  icon: mdi:food-fork-drink
+  entities:
+    - group.fridge
 
-rt-ac100:
+### GROUPS ###
+rt-ac1200:
   name: RT-AC1200
   entities:
     - sensor.rt_ac1200_bytes_received
@@ -67,3 +88,23 @@ late_lights:
     - light.far_corner
     - light.corner
     - light.hall
+
+mikes_iphone:
+  name: iPhone XS
+  entities:
+    - device_tracker.michaels_iphone
+    - sensor.michaels_iphone_battery_level
+    - sensor.michaels_iphone_battery_state
+
+fridge:
+  name: Fridge
+  entities:
+    - sensor.fridge
+    - sensor.freezer
+    - sensor.freezer_temperature_sensor
+    
+august:
+  name: August Smart Lock
+  entities:
+    - sensor.august
+    

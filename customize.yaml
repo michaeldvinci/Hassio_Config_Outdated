@@ -1,0 +1,6 @@
+media_player.yamaha_receiver_zone_2:
+  hidden: true
+group.all_lights:
+  hidden: true
+group.all_scripts:
+  hidden: true

@@ -17,15 +17,13 @@ climate:
     
 remote:
   - platform: harmony
-    name: Harmony Hub
-    host: secret! harmony_address
+    name: Living_Room_Hub
+    host: 192.168.50.33
     
 http:
   api_password: !secret api_password
   ip_ban_enabled: False
   base_url: http://conedmiro.duckdns.org:8123
-
-config:
 
 updater:
 
@@ -65,7 +63,7 @@ panel_iframe:
     icon: mdi:home-circle
     url: http://192.168.50.13:8123/states
   terminal:
-    title: Terminal
+    title: "Terminal"
     icon: mdi:console
     url: https://192.168.50.13:7681
     
@@ -211,4 +209,4 @@ sensor:
 
 group: !include groups.yaml
 # automation: !include automations.yaml
-script: !include scripts.yaml
+script: !include_dir_merge_named scripts/
