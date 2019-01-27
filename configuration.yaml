@@ -1,0 +1,177 @@
+homeassistant:
+  name: Home
+  latitude: !secret lat
+  longitude: !secret long
+  elevation: 0
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+
+frontend:
+
+http:
+  api_password: !secret api_password
+  ip_ban_enabled: False
+  base_url: http://conedmiro.duckdns.org:8123
+
+config:
+
+updater:
+
+device_tracker:
+  - platform: tile
+    username: michaeldvinci@gmail.com
+    password: !secret tracker_password
+    show_inactive: true
+
+ios:
+
+homekit:
+      
+panel_iframe:
+  configurator:
+    title: "Configurator"
+    icon: mdi:wrench
+    url: http://192.168.50.13:3218/
+  pihole:
+    title: "Pi-hole"
+    icon: mdi:block-helper
+    url: https://192.168.50.13:4865
+  logger:
+    title: "Logger"
+    icon: mdi:card-text-outline
+    url: http://192.168.50.13:4277
+  nodered:
+    title: "Node-Red"
+    icon: mdi:sitemap
+    url: https://192.168.50.13:1880
+  states_home:
+    title: "States"
+    icon: mdi:home-circle
+    url: http://192.168.50.13:8123/states
+  portainer:
+    title: "Portainer"
+    icon: mdi:docker
+    url: https://192.168.50.13:9000
+  terminal:
+    title: Terminal
+    icon: mdi:console
+    url: https://192.168.50.13:7681/
+    
+discovery:
+
+logger:
+  default: info
+  
+conversation:
+
+cloud:
+  
+switch:
+  - platform: mqtt
+    name: 'Tree'
+    state_topic: 'smartthings/Peanut Outlet/switch/state'
+    command_topic: 'smartthings/Peanut Outlet/switch/cmd'
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+  
+light:
+  - platform: mqtt
+    name: "Bathroom Left"
+    state_topic: "smartthings/Bathroom 1/switch/state"
+    command_topic: "smartthings/Bathroom 1/switch/cmd"
+    payload_on: "on"
+    payload_off: "off"
+  - platform: mqtt
+    name: "Bathroom Center"
+    state_topic: "smartthings/Bathroom 2/switch/state"
+    command_topic: "smartthings/Bathroom 2/switch/cmd"
+    payload_on: "on"
+    payload_off: "off"
+  - platform: mqtt
+    name: "Bathroom Right"
+    state_topic: "smartthings/Bathroom 3/switch/state"
+    command_topic: "smartthings/Bathroom 3/switch/cmd"
+    payload_on: "on"
+    payload_off: "off"
+    
+sensor:
+  - platform: mqtt
+    name: "Living Room Temperature Sensor"
+    state_topic: "smartthings/Living Room Temperature Sensor/temperature/state"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Bedroom Temperature Sensor"
+    state_topic: "smartthings/Bedroom Temperature Sensor/temperature/state"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Lyric_Round"
+    state_topic: "smartthings/Lyric/temperature"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Freezer Temperature Sensor"
+    state_topic: "smartthings/Freezer/temperature/state"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Fridge"
+    state_topic: "smartthings/Fridge/contact/state"
+  - platform: mqtt
+    name: "Freezer"
+    state_topic: "smartthings/Freezer/contact/state"
+  - platform: mqtt
+    name: August
+    state_topic: "smartthings/August Smart Lock Pro/lock/state"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
+  - platform: mqtt
+    name: "Bathroom Motion"
+    state_topic: "smartthings/Bathroom Sensor/motion/state"
+    payload_on: "active"
+    payload_off: "inactive"
+  - platform: mqtt
+    name: "Bathroom Multi Motion"
+    state_topic: "smartthings/Bathroom Motion/motion/state"
+    payload_on: "active"
+    payload_off: "inactive"
+  - platform: mqtt
+    name: "Bathroom Multi Temp"
+    state_topic: "smartthings/Bathroom Motion/temperature/state"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Bathroom Multi Lume"
+    state_topic: "smartthings/Bathroom Motion/illuminance/state"
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "Bathroom Multi Humid"
+    state_topic: "smartthings/Bathroom Motion/humidity/state"
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "Living Room Multi Motion"
+    state_topic: "smartthings/Living Room Motion/motion/state"
+    payload_on: "active"
+    payload_off: "inactive"
+  - platform: mqtt
+    name: "Living Room Multi Temp"
+    state_topic: "smartthings/Living Room Motion/temperature/state"
+    unit_of_measurement: '°F'
+  - platform: mqtt
+    name: "Living Room Multi Lume"
+    state_topic: "smartthings/Living Room Motion/illuminance/state"
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "Living Room Multi Humid"
+    state_topic: "smartthings/Living Room Motion/humidity/state"
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "Bedroom Motion"
+    state_topic: "smartthings/Bedroom Multi Sensor/motion/state"
+    payload_on: "active"
+    payload_off: "inactive"
+  - platform: mqtt
+    name: "Litter Box 2"
+    state_topic: "smartthings/Litter Box 2/contact/state"
+
+group: !include groups.yaml
+# automation: !include automations.yaml
+script: !include scripts.yaml

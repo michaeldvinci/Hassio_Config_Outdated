@@ -1,0 +1,69 @@
+# Default_view:
+#   name: DEFAULT
+#   view: yes
+#   icon: mdi:home
+#   entities:
+#     - group.bathroom_lights
+
+rt-ac100:
+  name: RT-AC1200
+  entities:
+    - sensor.rt_ac1200_bytes_received
+    - sensor.rt_ac1200_bytes_sent
+    - sensor.rt_ac1200_kbyte_sec_received
+    - sensor.rt_ac1200_kbyte_sec_sent
+    - sensor.rt_ac1200_packets_received
+    - sensor.rt_ac1200_packets_sent
+    - sensor.rt_ac1200_packets_sec_received
+    - sensor.rt_ac1200_packets_sec_sent
+
+bathroom_lights:
+  name: Bathroom Lights
+  entities:
+    - light.bathroom_center
+    - light.bathroom_left
+    - light.bathroom_right
+
+bathroom_motion:
+  name: Bathroom Motion Sensor
+  entities:
+    - sensor.bathroom_motion
+  
+bathroom_multi:
+  name: Bathroom Multi Sensor
+  entities:
+    - sensor.bathroom_multi_humid
+    - sensor.bathroom_multi_lume
+    - sensor.bathroom_multi_motion
+    - sensor.bathroom_multi_temp
+
+living_room_multi:
+  name: Living Room Multi Sensor
+  entities:
+    - sensor.living_room_multi_humid
+    - sensor.living_room_multi_lume
+    - sensor.living_room_multi_motion
+    - sensor.living_room_multi_temp
+    
+living_room_lights:
+  name: Living Room Lights
+  entities:
+    - light.bar
+    - light.entrance
+    - light.dining
+    - light.far_corner
+    - light.corner
+    - light.hall
+    
+right_side_lights:
+  name: Right Side Lights
+  entities:
+    - light.far_corner
+    - light.corner
+    
+late_lights:
+  name: Late Lights
+  entities:
+    - light.far_corner
+    - light.corner
+    - light.hall

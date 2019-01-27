@@ -1,0 +1,294 @@
+resources:
+  - url: /local/plan-coordinates.js?v=2
+    type: js
+
+#red:   #D80027  rgb(216,0,39)
+#green: #67B230  rgb(103,178,48)
+#blue   #44739e  rgb(68,115,158)
+
+views:
+  - icon: mdi:home
+    id: home
+    title: home
+    theme: dark-mode
+    panel: true
+    cards:
+      - type: picture-elements
+        scale: 65%
+        # image: http://i.imgur.com/D9ZWmsk.jpg
+        image: /local/floorplan2.png
+        panel: true
+        elements:
+        
+        # Living Room
+          
+          # Front Door Lock
+          - type: image
+            entity: sensor.august
+            style:
+              top: 86%
+              left: 10%
+              color: black
+            state_image:
+              "locked": /local/lock.png
+              "unlocked": /local/unlock.png
+          
+        #   # Lyric Round
+        #   - type: state-label
+        #     entity: sensor.lyric_round
+        #     style:
+        #       top: 76%
+        #       left: 29%
+        #       text-color: transparent
+              
+          # Tree
+          - type: image
+            tap_action: toggle
+            entity: switch.tree
+            style:
+              top: 86%
+              left: 27%
+            state_image:
+              "on": /local/tree_on.png
+              "off": /local/tree_off.png
+              
+          # Front Door Cam
+          - type: image
+            entity: sensor.august
+            style:
+              top: 82%
+              left: 15%
+              color: black
+            state_image:
+              "locked": /local/cam-left.png
+              "unlocked": /local/cam-left.png
+              
+          # Living Cam [Fix]
+          - type: image
+            entity: sensor.august
+            style:
+              top: 71%
+              left: 31%
+              color: black
+            state_image:
+              "locked": /local/cam-right.png
+              "unlocked": /local/cam-right.png
+              
+          # Living Room Temp
+          - type: state-label
+            tap_action: more-info
+            hold_action: more-info
+            entity: sensor.living_room_temperature_sensor
+            style:
+              top: 73%
+              left: 50.5%
+              color: "#44739e"
+              font-weight: bold
+              
+          # Entrance
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.entrance
+            style:
+              top: 86%
+              left: 16%
+          
+          # Bar    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bar
+            style:
+              top: 65%
+              left: 42%
+          
+          # Dining    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.dining
+            style:
+              top: 84.5%
+              left: 45.5%
+          
+          # Hall    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.hall
+            style:
+              top: 41%
+              left: 56.5%
+          
+          # Corner    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.corner
+            style:
+              top: 89%
+              left: 90%
+              
+          # Litter Box
+          - type: image
+            entity: sensor.litter_box
+            style:
+              top: 85%
+              left: 90%
+            state_image:
+              "open": /local/clean_open.png
+              "closed": /local/clean_closed.png
+          
+          # Far Corner    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.far_corner
+            style:
+              top: 55%
+              left: 90%
+              
+        # Kitchen
+        
+          # Fridge
+          - type: image
+            entity: sensor.fridge
+            style:
+              top: 44%
+              left: 32%
+            state_image:
+              "open": /local/fridge_open2.png
+              "closed": /local/fridge_closed2.png
+          
+          # Freezer
+          - type: image
+            entity: sensor.freezer
+            style:
+              top: 44%
+              left: 32%
+            state_image:
+              "open": /local/freezer_open2.png
+              "closed": /local/freezer_closed2.png
+              
+          # Freezer Temperature Sensor
+          - type: state-label
+            tap_action: more-info
+            hold_action: more-info
+            entity: sensor.freezer_temperature_sensor
+            style:
+              top: 30.5%
+              left: 32.5%
+              color: "#44739e"
+              font-weight: bold
+              
+          # Kitchen Cam [Fix]
+          - type: image
+            entity: sensor.august
+            style:
+              top: 47%
+              left: 37%
+              color: black
+            state_image:
+              "locked": /local/cam-left.png
+              "unlocked": /local/cam-left.png
+        
+        # Bathroom
+          
+          # Bathroom 3
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bathroom_right
+            style:
+              top: 15%
+              left: 43%
+          
+          # Bathroom 2    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bathroom_center
+            style:
+              top: 20%
+              left: 43%
+          
+          # Bathroom 1    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bathroom_left
+            style:
+              top: 25%
+              left: 43%
+              
+          # Bathroom Motion [Fix]
+          - type: image
+            entity: sensor.bathroom_motion
+            style:
+              top: 20%
+              left: 49%
+              color: black
+            state_image:
+              "active": /local/active.png
+              "inactive": /local/inactive.png
+          
+        # Bedroom
+          
+          # Bedroom Temp
+          - type: state-label
+            tap_action: more-info
+            hold_action: more-info
+            entity: sensor.bedroom_temperature_sensor
+            style:
+              top: 37.5%
+              left: 76%
+              color: "#44739e"
+              font-weight: bold
+        
+          # Bed Right
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bed_right
+            style:
+              top: 10.5%
+              left: 89.5%
+          
+          # Bed Left    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bed_left
+            style:
+              top: 10.5%
+              left: 67.5%
+          
+          # Bedroom Overhead      
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bed_left #Fix 120118
+            style:
+              top: 31%
+              left: 77%
+          
+          # Bedroom Motion
+          - type: image
+            entity: sensor.bedroom_motion
+            style:
+              top: 20%
+              left: 65%
+              color: black
+            state_image:
+              "active": /local/active.png
+              "inactive": /local/inactive.png
+          
+          # Reading Chair    
+          - type: state-icon
+            tap_action: toggle
+            hold_action: more-info
+            entity: light.bed_left #Fix 120118
+            style:
+              top: 47%
+              left: 90%
