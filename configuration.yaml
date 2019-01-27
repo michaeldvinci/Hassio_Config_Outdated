@@ -9,6 +9,12 @@ homeassistant:
 
 frontend:
 
+climate:
+  - platform: honeywell
+    username: !secret honeywell_login
+    password: !secret honeywell_password
+    scan_interval: 600
+    
 http:
   api_password: !secret api_password
   ip_ban_enabled: False
@@ -20,7 +26,7 @@ updater:
 
 device_tracker:
   - platform: tile
-    username: michaeldvinci@gmail.com
+    username: !secret tracker_login
     password: !secret tracker_password
     show_inactive: true
 
