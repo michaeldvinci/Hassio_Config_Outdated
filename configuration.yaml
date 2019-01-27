@@ -15,6 +15,11 @@ climate:
     password: !secret honeywell_password
     scan_interval: 600
     
+remote:
+  - platform: harmony
+    name: Harmony Hub
+    host: 192.168.50.33
+    
 http:
   api_password: !secret api_password
   ip_ban_enabled: False
@@ -38,11 +43,7 @@ panel_iframe:
   configurator:
     title: "Configurator"
     icon: mdi:wrench
-    url: http://192.168.50.13:3218/
-  pihole:
-    title: "Pi-hole"
-    icon: mdi:block-helper
-    url: https://192.168.50.13:4865
+    url: http://192.168.50.13:3218
   logger:
     title: "Logger"
     icon: mdi:card-text-outline
@@ -51,18 +52,22 @@ panel_iframe:
     title: "Node-Red"
     icon: mdi:sitemap
     url: https://192.168.50.13:1880
-  states_home:
-    title: "States"
-    icon: mdi:home-circle
-    url: http://192.168.50.13:8123/states
+  pihole:
+    title: "Pi-hole"
+    icon: mdi:block-helper
+    url: https://192.168.50.13:4865
   portainer:
     title: "Portainer"
     icon: mdi:docker
     url: https://192.168.50.13:9000
+  states_home:
+    title: "States"
+    icon: mdi:home-circle
+    url: http://192.168.50.13:8123/states
   terminal:
     title: Terminal
     icon: mdi:console
-    url: https://192.168.50.13:7681/
+    url: https://192.168.50.13:7681
     
 discovery:
 
