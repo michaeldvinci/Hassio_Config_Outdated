@@ -58,10 +58,6 @@ panel_iframe:
     title: "Portainer"
     icon: mdi:docker
     url: https://192.168.50.13:9000
-  states_home:
-    title: "States"
-    icon: mdi:home-circle
-    url: http://192.168.50.13:8123/states
   terminal:
     title: "Terminal"
     icon: mdi:console
