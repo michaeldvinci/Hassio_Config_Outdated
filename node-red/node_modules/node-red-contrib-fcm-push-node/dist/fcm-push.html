@@ -1,0 +1,41 @@
+<script type="text/x-red" data-help-name="fcm-push">
+<p>Firebase Cloud Messaging Push (fcm-push) Node</p>
+<p>A simple interface to Firebase Cloud Messaging (FCM) for Android and iOS, powered by <a href='https://github.com/nandarustam/fcm-push'>fcm-push</a> NodeJs library.</p>
+<p>It will read the payload for the following variables<p>
+<p>
+  <ul>
+    <li><code>to</code>: (required) <i>[String]</i> Device token or topic</li>
+    <li><code>collapseKey</code>:<i>[String]</i>Collapse Key</li>
+    <li><code>data</code>: <i>[Object]</i> Data passed</li>
+    <li><code>notification</code>: <i>[Object]</i> Object with two properties <code>title</code> and <code>body</code></li>
+  </ul>
+</p>
+<p>It uses the environment variable <code>FCM_SERVER_KEY</code> for the <i>server key</i> configuration</p>
+</script>
+
+<script type="text/x-red" data-template-name="fcm-push">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name </label>
+    <input type="text" id="node-input-name" placeholder="Name"/>
+  </div>
+</script>
+
+<script type="text/javascript">
+(function() {
+  RED.nodes.registerType('fcm-push', {
+    color: '#fff',
+    icon: 'firebase.png',
+    align: 'right',
+    defaults: {
+      name: {value: ''}
+    },
+    category: 'output',
+    inputs: 1,
+    // TODO: optional success output
+    outputs: 0,
+    label: function() {
+      return this.name || 'Firebase Cloud Messaging Push';
+    }
+  });
+})();
+</script>

@@ -1,0 +1,10 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-alexa-local": "~0.3.24",
+        "node-red-contrib-fcm-push-node": "0.0.2"
+    }
+}
