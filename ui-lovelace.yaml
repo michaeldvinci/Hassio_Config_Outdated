@@ -3,11 +3,7 @@ resources:
     url: /local/plan-coordinates.js?v=2
 title: Mike's Apartment
 views:
-  - title: Floorplan
-    id: floorplan
-    icon: 'mdi:home-assistant'
-    panel: true
-    theme: dark-mode
+  - badges: []
     cards:
       - elements:
           - entity: sensor.august
@@ -105,6 +101,38 @@ views:
               top: 55%
             tap_action: toggle
             type: state-icon
+          - entity: media_player.yamaha_receiver
+            type: icon
+            icon: mdi:audio-video
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 72%
+              top: 54%
+          - entity: media_player.playstation_4
+            type: icon
+            icon: mdi:playstation
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 75%
+              top: 54%
+          - entity: media_player.apartment
+            type: icon
+            icon: mdi:apple
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 78%
+              top: 54%
+          - entity: remote.living_room_hub
+            type: icon
+            icon: mdi:remote
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 81%
+              top: 54%
           - entity: sensor.fridge
             state_image:
               closed: /local/fridge_closed2.png
@@ -228,62 +256,67 @@ views:
         panel: true
         scale: 65%
         type: picture-elements
-  - title: Home
-    id: home
-    show_header_toggle: true
-    cards:
-      - type: media-control
-        entity: media_player.apartment
-      - type: media-control
-        entity: media_player.yamaha_receiver
-      - type: entities
-        title: August Smart Lock
-        show_header_toggle: false
-        entities:
+    icon: 'mdi:home-assistant'
+    id: floorplan
+    panel: true
+    theme: dark-mode
+    title: Floorplan
+  - cards:
+      - entity: media_player.apartment
+        type: media-control
+      - entity: media_player.yamaha_receiver
+        type: media-control
+      - entities:
           - group.august
-      - type: entities
-        title: Living Room Multi Sensor
         show_header_toggle: false
-        entities:
+        title: August Smart Lock
+        type: entities
+      - entities:
           - sensor.living_room_multi_humid
           - sensor.living_room_multi_lume
           - sensor.living_room_multi_motion
           - sensor.living_room_multi_temp
-      - type: entities
-        title: Living Room Lights
         show_header_toggle: false
-        entities:
+        title: Living Room Multi Sensor
+        type: entities
+      - entities:
           - group.living_room_lights
           - group.late_lights
           - group.right_side_lights
-  - title: Bathroom
-    id: bathroom
-    show_header_toggle: true
-    cards:
-      - type: entities
-        title: Bathroom Multi Sensor
         show_header_toggle: false
-        entities:
+        title: Living Room Lights
+        type: entities
+    id: home
+    show_header_toggle: true
+    title: Home
+  - cards:
+      - entities:
           - entity: sensor.bathroom_multi_humid
           - sensor.bathroom_multi_lume
           - sensor.bathroom_multi_motion
           - sensor.bathroom_multi_temp
-      - type: entities
-        title: Bathroom Motion Sensor
         show_header_toggle: false
-        entities:
+        title: Bathroom Multi Sensor
+        type: entities
+      - entities:
           - sensor.bathroom_motion
-      - type: entities
-        title: Bathroom Lights
         show_header_toggle: false
-        entities:
+        title: Bathroom Motion Sensor
+        type: entities
+      - entities:
           - group.bathroom_lights
-  - title: Kitchen
-    id: kitchen
+        show_header_toggle: false
+        title: Bathroom Lights
+        type: entities
+    id: bathroom
     show_header_toggle: true
-    cards:
-      - type: entities
-        entities:
+    title: Bathroom
+  - cards:
+      - entities:
           - sensor.fridge
           - sensor.freezer
           - sensor.freezer_temperature_sensor
+        type: entities
+    id: kitchen
+    show_header_toggle: true
+    title: Kitchen

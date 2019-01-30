@@ -65,7 +65,19 @@ panel_iframe:
     
 discovery:
 
+logger:
+  default: info
+  
+conversation:
+
+cloud:
+
 media_player:
+  - platform: ps4
+    host: http://192.169.50.13:3031
+    ps4_ip: !secret ps4_address
+    name: PlayStation 4
+    local_store: games
   - platform: yamaha
     host: !secret yamaha_address
     source_ignore:
@@ -90,13 +102,6 @@ media_player:
       HDMI5: "Switch"
       AUDIO1: ""
       AUDIO2: ""
-
-logger:
-  default: info
-  
-conversation:
-
-cloud:
   
 switch:
   - platform: mqtt
