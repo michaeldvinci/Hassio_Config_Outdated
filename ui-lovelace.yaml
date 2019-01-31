@@ -5,11 +5,6 @@ title: Mike's Apartment
 views:
   - badges: []
     cards:
-    icon: 'mdi:home-assistant'
-    id: floorplan
-    panel: true
-    theme: dark-mode
-    title: Floorplan
       - elements:
           - entity: sensor.august
             state_image:
@@ -107,37 +102,45 @@ views:
             tap_action: toggle
             type: state-icon
           - entity: media_player.yamaha_receiver
-            type: icon
-            icon: mdi:audio-video
+            icon: 'mdi:audio-video'
             style:
               color: '#44739e'
               font-weight: bold
-              left: 72%
-              top: 54%
-          - entity: media_player.playstation_4
+              left: 69.5%
+              top: 55%
             type: icon
-            icon: mdi:playstation
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 75%
-              top: 54%
-          - entity: media_player.apartment
-            type: icon
-            icon: mdi:apple
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 78%
-              top: 54%
           - entity: remote.living_room_hub
-            type: icon
-            icon: mdi:remote
+            icon: 'mdi:remote'
             style:
               color: '#44739e'
               font-weight: bold
-              left: 81%
-              top: 54%
+              left: 73%
+              top: 55%
+            type: icon
+          - entity: remote.living_room_hub
+            icon: 'mdi:amazon-alexa'
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 76.5%
+              top: 55%
+            type: icon
+          - entity: media_player.playstation_4
+            icon: 'mdi:playstation'
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 80%
+              top: 55%
+            type: icon
+          - entity: media_player.apartment
+            icon: 'mdi:apple'
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 83.5%
+              top: 55%
+            type: icon
           - entity: sensor.fridge
             state_image:
               closed: /local/fridge_closed2.png
@@ -193,6 +196,14 @@ views:
               top: 25%
             tap_action: toggle
             type: state-icon
+          - entity: remote.living_room_hub
+            icon: 'mdi:amazon-alexa'
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 49%
+              top: 24.5%
+            type: icon
           - entity: sensor.bathroom_multi_motion
             state_image:
               active: /local/active.png
@@ -200,7 +211,7 @@ views:
             style:
               color: black
               left: 49%
-              top: 20%
+              top: 19.5%
             type: image
           - entity: sensor.bathroom_multi_temp
             hold_action: more-info
@@ -257,14 +268,24 @@ views:
               top: 47%
             tap_action: toggle
             type: state-icon
-        image: /local/floorplan2.png
+          - entity: remote.living_room_hub
+            icon: 'mdi:amazon-alexa'
+            style:
+              color: '#44739e'
+              font-weight: bold
+              left: 73%
+              top: 47%
+            type: icon
+        image: /local/floorplan5.png
         panel: true
         scale: 65%
         type: picture-elements
+    icon: 'mdi:home-assistant'
+    id: floorplan
+    panel: true
+    theme: dark-mode
+    title: Floorplan
   - cards:
-    id: home
-    show_header_toggle: true
-    title: Home
       - entity: media_player.apartment
         type: media-control
       - entity: media_player.yamaha_receiver
@@ -289,10 +310,10 @@ views:
         show_header_toggle: false
         title: Living Room Lights
         type: entities
-  - cards:
-    id: bathroom
+    id: home
     show_header_toggle: true
-    title: Bathroom
+    title: Home
+  - cards:
       - entities:
           - entity: sensor.bathroom_multi_humid
           - sensor.bathroom_multi_lume
@@ -311,12 +332,15 @@ views:
         show_header_toggle: false
         title: Bathroom Lights
         type: entities
-  - cards:
-    id: kitchen
+    id: bathroom
     show_header_toggle: true
-    title: Kitchen
+    title: Bathroom
+  - cards:
       - entities:
           - sensor.fridge
           - sensor.freezer
           - sensor.freezer_temperature_sensor
         type: entities
+    id: kitchen
+    show_header_toggle: true
+    title: Kitchen
