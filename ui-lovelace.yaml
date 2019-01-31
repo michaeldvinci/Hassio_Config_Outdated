@@ -146,16 +146,16 @@ views:
               closed: /local/fridge_closed2.png
               open: /local/fridge_open2.png
             style:
-              left: 32%
-              top: 44%
+              left: 24%
+              top: 44.5%
             type: image
           - entity: sensor.freezer
             state_image:
               closed: /local/freezer_closed2.png
               open: /local/freezer_open2.png
             style:
-              left: 32%
-              top: 44%
+              left: 24%
+              top: 44.5%
             type: image
           - entity: sensor.freezer_temperature_sensor
             hold_action: more-info
@@ -276,7 +276,7 @@ views:
               left: 73%
               top: 47%
             type: icon
-        image: /local/floorplan5.png
+        image: /local/floorplan6.png
         panel: true
         scale: 65%
         type: picture-elements
