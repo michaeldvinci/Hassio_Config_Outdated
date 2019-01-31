@@ -78,6 +78,10 @@ media_player:
     ps4_ip: !secret ps4_address
     name: PlayStation 4
     local_store: games
+  - platform: alexa
+    email: !secret amazon_email
+    password: !secret amazon_pass
+    url: “amazon.com”
   - platform: yamaha
     host: !secret yamaha_address
     source_ignore:
