@@ -4,3 +4,10 @@ group.all_lights:
   hidden: true
 group.all_scripts:
   hidden: true
+  
+sensor.bathroom_motion_all:
+  templates:
+    icon_color: >
+      if (state === 'active') return 'rgb(164, 232, 148)'; 
+      return 'rgb(68, 115, 158)';
+      

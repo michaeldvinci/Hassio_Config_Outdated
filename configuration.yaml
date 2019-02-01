@@ -9,11 +9,11 @@ homeassistant:
 
 frontend:
 
-climate:
-  - platform: honeywell
-    username: !secret honeywell_login
-    password: !secret honeywell_password
-    scan_interval: 600
+config: 
+
+lyric:
+  client_id: secret! honeywell_client_key
+  client_secret: secret! honeywell_client_secret
     
 remote:
   - platform: harmony
@@ -211,6 +211,54 @@ sensor:
   - platform: mqtt
     name: "Litter Box 2"
     state_topic: "smartthings/Litter Box 2/contact/state"
+  - platform: template
+    sensors:
+      bathroom_motion_all:
+        friendly_name: "Bathroom Motion"
+        icon_template: >-
+          {% if is_state('sensor.bathroom_multi_motion', 'active') or is_state('sensor.bathroom_motion', 'active') %}
+            mdi:run
+          {% else %}
+            mdi:walk
+          {% endif %}
+        value_template: >-
+          {% if is_state('sensor.bathroom_multi_motion', 'active') or is_state('sensor.bathroom_motion', 'active') %}
+            active
+          {% else %}
+            inactive
+          {% endif %}
+  - platform: template
+    sensors:
+      bedroom_motion_all:
+        friendly_name: "Bedroom Motion"
+        icon_template: >-
+          {% if is_state('sensor.bedroom_motion', 'active') %}
+            mdi:run
+          {% else %}
+            mdi:walk
+          {% endif %}
+        value_template: >-
+          {% if is_state('sensor.bedroom_motion', 'active') %}
+            active
+          {% else %}
+            inactive
+          {% endif %}
+  - platform: template
+    sensors:
+      living_motion_all:
+        friendly_name: "Living Room Motion"
+        icon_template: >-
+          {% if is_state('sensor.living_room_multi_motion', 'active') %}
+            mdi:run
+          {% else %}
+            mdi:walk
+          {% endif %}
+        value_template: >-
+          {% if is_state('sensor.living_room_multi_motion', 'active') %}
+            active
+          {% else %}
+            inactive
+          {% endif %}
 
 group: !include groups.yaml
 # automation: !include automations.yaml

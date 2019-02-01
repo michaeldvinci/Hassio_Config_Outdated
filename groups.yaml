@@ -4,7 +4,7 @@ default_view:
   icon: mdi:home
   entities:
     - media_player.apartment
-    - media_player.yamaha_receiver
+    - media_player.rx_v681_fd72a2
     - group.august
     - group.living_room_multi
     - group.living_room_lights
