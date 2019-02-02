@@ -1,0 +1,33 @@
+- platform: ps4
+  host: http://192.169.50.13:3031
+  ps4_ip: !secret ps4_address
+  name: PlayStation 4
+  local_store: games
+- platform: alexa
+  email: !secret amazon_email
+  password: !secret amazon_pass
+  url: “amazon.com”
+- platform: yamaha
+  host: !secret yamaha_address
+  source_ignore:
+    - AV1
+    - AV2
+    - AV3
+    - AV4
+    - AV5
+    - AV6
+    - Pandora
+    - Rhapsody
+    - SiriusXM
+    - Spotify
+    - Tuner
+    - USB
+    - V-AUX
+  source_names:
+    HDMI1: "Apple TV"
+    HDMI2: "Playstation 4"
+    HDMI3: "Wii U"
+    HDMI4: "Cable"
+    HDMI5: "Switch"
+    AUDIO1: ""
+    AUDIO2: ""
