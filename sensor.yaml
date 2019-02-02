@@ -1,0 +1,138 @@
+- platform: mqtt
+  name: "Living Room Temperature Sensor"
+  state_topic: "smartthings/Living Room Temperature Sensor/temperature/state"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Bedroom Temperature Sensor"
+  state_topic: "smartthings/Bedroom Temperature Sensor/temperature/state"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Lyric_Round"
+  state_topic: "smartthings/Lyric/temperature"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Freezer Temperature Sensor"
+  state_topic: "smartthings/Freezer/temperature/state"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Fridge"
+  state_topic: "smartthings/Fridge/contact/state"
+- platform: mqtt
+  name: "Freezer"
+  state_topic: "smartthings/Freezer/contact/state"
+- platform: mqtt
+  name: August
+  state_topic: "smartthings/August Smart Lock Pro/lock/state"
+  payload_lock: "locked"
+  payload_unlock: "unlocked"
+- platform: mqtt
+  name: "Bathroom Motion"
+  state_topic: "smartthings/Bathroom Sensor/motion/state"
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "Bathroom Multi Motion"
+  state_topic: "smartthings/Bathroom Motion/motion/state"
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "Bathroom Multi Temp"
+  state_topic: "smartthings/Bathroom Motion/temperature/state"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Bathroom Multi Lume"
+  state_topic: "smartthings/Bathroom Motion/illuminance/state"
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: "Bathroom Multi Humid"
+  state_topic: "smartthings/Bathroom Motion/humidity/state"
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: "Living Room Multi Motion"
+  state_topic: "smartthings/Living Room Motion/motion/state"
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "Living Room Multi Temp"
+  state_topic: "smartthings/Living Room Motion/temperature/state"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  name: "Living Room Multi Lume"
+  state_topic: "smartthings/Living Room Motion/illuminance/state"
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: "Living Room Multi Humid"
+  state_topic: "smartthings/Living Room Motion/humidity/state"
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: "Bedroom Motion"
+  state_topic: "smartthings/Bedroom Multi Sensor/motion/state"
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "Litter Box 2"
+  state_topic: "smartthings/Litter Box 2/contact/state"
+- platform: template
+  sensors:
+    bathroom_motion_all:
+      friendly_name: "Bathroom Motion"
+      icon_template: >-
+        {% if is_state('sensor.bathroom_multi_motion', 'active') or is_state('sensor.bathroom_motion', 'active') %}
+          mdi:run
+        {% else %}
+          mdi:walk
+        {% endif %}
+      value_template: >-
+        {% if is_state('sensor.bathroom_multi_motion', 'active') or is_state('sensor.bathroom_motion', 'active') %}
+          active
+        {% else %}
+          inactive
+        {% endif %}
+- platform: template
+  sensors:
+    bedroom_motion_all:
+      friendly_name: "Bedroom Motion"
+      icon_template: >-
+        {% if is_state('sensor.bedroom_motion', 'active') %}
+          mdi:run
+        {% else %}
+          mdi:walk
+        {% endif %}
+      value_template: >-
+        {% if is_state('sensor.bedroom_motion', 'active') %}
+          active
+        {% else %}
+          inactive
+        {% endif %}
+- platform: template
+  sensors:
+    living_motion_all:
+      friendly_name: "Living Room Motion"
+      icon_template: >-
+        {% if is_state('sensor.living_room_multi_motion', 'active') %}
+          mdi:run
+        {% else %}
+          mdi:walk
+        {% endif %}
+      value_template: >-
+        {% if is_state('sensor.living_room_multi_motion', 'active') %}
+          active
+        {% else %}
+          inactive
+        {% endif %}
+- platform: template
+  sensors:
+    august_lock:
+      friendly_name: "August Smart Lock"
+      icon_template: >-
+        {% if is_state('sensor.august', 'locked') %}
+          mdi:lock-outline
+        {% else %}
+          mdi:lock-open-outline
+        {% endif %}
+      value_template: >-
+        {% if is_state('sensor.august', 'locked') %}
+          locked
+        {% else %}
+          unlocked
+        {% endif %}

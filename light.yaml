@@ -1,0 +1,18 @@
+- platform: mqtt
+  name: "Bathroom Left"
+  state_topic: "smartthings/Bathroom 1/switch/state"
+  command_topic: "smartthings/Bathroom 1/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Bathroom Center"
+  state_topic: "smartthings/Bathroom 2/switch/state"
+  command_topic: "smartthings/Bathroom 2/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Bathroom Right"
+  state_topic: "smartthings/Bathroom 3/switch/state"
+  command_topic: "smartthings/Bathroom 3/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
