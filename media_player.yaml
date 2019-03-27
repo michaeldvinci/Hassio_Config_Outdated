@@ -1,8 +1,3 @@
-# - platform: ps4
-#   host: http://192.169.50.13:3031
-#   ps4_ip: !secret ps4_address
-#   name: PlayStation 4
-#   local_store: games
 - platform: yamaha
   host: !secret yamaha_address
   source_ignore:
@@ -27,8 +22,3 @@
     HDMI5: "Switch"
     AUDIO1: ""
     AUDIO2: ""
-# - platform: androidtv
-#   host: 192.168.50.49
-#   name: "Fire Stick 4K"
-#   adb_server_ip: 127.0.0.1
-#   adb_server_port: 5037

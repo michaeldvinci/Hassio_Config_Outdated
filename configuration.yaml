@@ -13,10 +13,6 @@ config:
 
 system_health:
 
-# lyric:
-#   client_id: !secret honeywell_client_key
-#   client_secret: !secret honeywell_client_secret
-    
 remote:
   - platform: harmony
     name: Living_Room_Hub
@@ -82,14 +78,6 @@ discovery:
 logger:
   default: info
   
-# switch:
-#   - platform: mytuya
-#     host: 192.168.150.135
-#     local_key: 24962f572bfb6ed6
-#     device_id: 10017743840d8e800b81
-#     name: Diffuser
-#     id: 1
-    
 conversation:
 
 cloud:
