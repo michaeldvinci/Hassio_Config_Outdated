@@ -1,346 +1,575 @@
-resources:
-  - type: js
-    url: /local/plan-coordinates.js?v=2
-title: Mike's Apartment
-views:
-  - badges: []
-    cards:
-      - elements:
-          - entity: sensor.august
-            state_image:
-              locked: /local/lock.png
-              unlocked: /local/unlock.png
-            style:
-              color: black
-              left: 10%
-              top: 86%
-            type: image
-          - entity: sensor.august
-            state_image:
-              locked: /local/cam-left.png
-              unlocked: /local/cam-left.png
-            style:
-              color: black
-              left: 15%
-              top: 82%
-            type: image
-          - entity: sensor.august
-            state_image:
-              locked: /local/cam-right.png
-              unlocked: /local/cam-right.png
-            style:
-              color: black
-              left: 31%
-              top: 71%
-            type: image
-          - entity: sensor.living_room_multi_temp
-            hold_action: more-info
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 50.5%
-              top: 73%
-            tap_action: more-info
-            type: state-label
-          - entity: light.entrance
-            hold_action: more-info
-            style:
-              left: 16%
-              top: 86%
-            tap_action: toggle
-            type: state-icon
-          - entity: sensor.living_room_multi_motion
-            state_image:
-              active: /local/active.png
-              inactive: /local/inactive.png
-            style:
-              color: black
-              left: 42%
-              top: 71%
-            type: image
-          - entity: light.bar
-            hold_action: more-info
-            style:
-              left: 42%
-              top: 65%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.dining
-            hold_action: more-info
-            style:
-              left: 45.5%
-              top: 84.5%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.hall
-            hold_action: more-info
-            style:
-              left: 56.5%
-              top: 41%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.corner
-            hold_action: more-info
-            style:
-              left: 90%
-              top: 89%
-            tap_action: toggle
-            type: state-icon
-          - entity: sensor.litter_box_2
-            state_image:
-              closed: /local/clean_closed.png
-              open: /local/clean_open.png
-            style:
-              left: 89.5%
-              top: 84%
-            type: image
-          - entity: light.far_corner
-            hold_action: more-info
-            style:
-              left: 90%
-              top: 55%
-            tap_action: toggle
-            type: state-icon
-          - entity: media_player.yamaha_receiver
-            icon: 'mdi:audio-video'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 69.5%
-              top: 55%
-            type: icon
-          - entity: remote.living_room_hub
-            icon: 'mdi:remote'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 73%
-              top: 55%
-            type: icon
-          - entity: remote.living_room_hub
-            icon: 'mdi:amazon-alexa'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 76.5%
-              top: 55%
-            type: icon
-          - entity: media_player.playstation_4
-            icon: 'mdi:playstation'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 80%
-              top: 55%
-            type: icon
-          - entity: media_player.apartment
-            icon: 'mdi:apple'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 83.5%
-              top: 55%
-            type: icon
-          - entity: sensor.fridge
-            state_image:
-              closed: /local/fridge_closed2.png
-              open: /local/fridge_open2.png
-            style:
-              left: 24%
-              top: 44.5%
-            type: image
-          - entity: sensor.freezer
-            state_image:
-              closed: /local/freezer_closed2.png
-              open: /local/freezer_open2.png
-            style:
-              left: 24%
-              top: 44.5%
-            type: image
-          - entity: sensor.freezer_temperature_sensor
-            hold_action: more-info
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 32.5%
-              top: 30.5%
-            tap_action: more-info
-            type: state-label
-          - entity: sensor.august
-            state_image:
-              locked: /local/cam-left.png
-              unlocked: /local/cam-left.png
-            style:
-              color: black
-              left: 37%
-              top: 47%
-            type: image
-          - entity: light.bathroom_right
-            hold_action: more-info
-            style:
-              left: 43%
-              top: 15%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.bathroom_center
-            hold_action: more-info
-            style:
-              left: 43%
-              top: 20%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.bathroom_left
-            hold_action: more-info
-            style:
-              left: 43%
-              top: 25%
-            tap_action: toggle
-            type: state-icon
-          - entity: remote.living_room_hub
-            icon: 'mdi:amazon-alexa'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 49%
-              top: 24.5%
-            type: icon
-          - entity: sensor.bathroom_multi_motion
-            state_image:
-              active: /local/active.png
-              inactive: /local/inactive.png
-            style:
-              color: black
-              left: 49%
-              top: 19.5%
-            type: image
-          - entity: sensor.bathroom_multi_temp
-            hold_action: more-info
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 47%
-              top: 12%
-            tap_action: more-info
-            type: state-label
-          - entity: sensor.bedroom_temperature_sensor
-            hold_action: more-info
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 76%
-              top: 37.5%
-            tap_action: more-info
-            type: state-label
-          - entity: light.bed_right
-            hold_action: more-info
-            style:
-              left: 89.5%
-              top: 10.5%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.bed_left
-            hold_action: more-info
-            style:
-              left: 67.5%
-              top: 10.5%
-            tap_action: toggle
-            type: state-icon
-          - entity: light.bed_left
-            hold_action: more-info
-            style:
-              left: 77%
-              top: 31%
-            tap_action: toggle
-            type: state-icon
-          - entity: sensor.bedroom_motion
-            state_image:
-              active: /local/active.png
-              inactive: /local/inactive.png
-            style:
-              color: black
-              left: 65%
-              top: 20%
-            type: image
-          - entity: light.bed_left
-            hold_action: more-info
-            style:
-              left: 90%
-              top: 47%
-            tap_action: toggle
-            type: state-icon
-          - entity: remote.living_room_hub
-            icon: 'mdi:amazon-alexa'
-            style:
-              color: '#44739e'
-              font-weight: bold
-              left: 73%
-              top: 47%
-            type: icon
-        image: /local/floorplan6.png
-        panel: true
-        scale: 65%
-        type: picture-elements
-    icon: 'mdi:home-assistant'
-    id: floorplan
-    panel: true
-    theme: dark-mode
-    title: Floorplan
-  - cards:
-      - entity: media_player.apartment
-        type: media-control
-      - entity: media_player.yamaha_receiver
-        type: media-control
-      - entities:
-          - group.august
-        show_header_toggle: false
-        title: August Smart Lock
-        type: entities
-      - entities:
-          - sensor.living_room_multi_humid
-          - sensor.living_room_multi_lume
-          - sensor.living_room_multi_motion
-          - sensor.living_room_multi_temp
-        show_header_toggle: false
-        title: Living Room Multi Sensor
-        type: entities
-      - entities:
-          - group.living_room_lights
-          - group.late_lights
-          - group.right_side_lights
-        show_header_toggle: false
-        title: Living Room Lights
-        type: entities
-    id: home
-    show_header_toggle: true
-    title: Home
-  - cards:
-      - entities:
-          - entity: sensor.bathroom_multi_humid
-          - sensor.bathroom_multi_lume
-          - sensor.bathroom_multi_motion
-          - sensor.bathroom_multi_temp
-        show_header_toggle: false
-        title: Bathroom Multi Sensor
-        type: entities
-      - entities:
-          - sensor.bathroom_motion
-        show_header_toggle: false
-        title: Bathroom Motion Sensor
-        type: entities
-      - entities:
-          - group.bathroom_lights
-        show_header_toggle: false
-        title: Bathroom Lights
-        type: entities
-    id: bathroom
-    show_header_toggle: true
-    title: Bathroom
-  - cards:
-      - entities:
-          - sensor.fridge
-          - sensor.freezer
-          - sensor.freezer_temperature_sensor
-        type: entities
-    id: kitchen
-    show_header_toggle: true
-    title: Kitchen
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "js",
+                    "url": "/local/plan-coordinates.js?v=2"
+                }
+            ],
+            "title": "Mike's Apartment",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "lock.august_smart_lock_pro",
+                                    "state_image": {
+                                        "locked": "/local/lock.png",
+                                        "unlocked": "/local/unlock.png"
+                                    },
+                                    "style": {
+                                        "color": "black",
+                                        "left": "10%",
+                                        "top": "86%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "sensor.august",
+                                    "icon": "mdi:cctv",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "16%",
+                                        "top": "82%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "sensor.august",
+                                    "icon": "mdi:cctv",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "28.5%",
+                                        "top": "69%",
+                                        "transform": "scaleX(-1)"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "climate.honeywell_home_thermostat",
+                                    "icon": "mdi:thermostat",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "30%",
+                                        "top": "75%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "sensor.living_room_multi_temp",
+                                    "hold_action": "more-info",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "50.5%",
+                                        "top": "73%"
+                                    },
+                                    "tap_action": "more-info",
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "light.entrance",
+                                    "style": {
+                                        "left": "16%",
+                                        "top": "86%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.living_motion_all",
+                                    "style": {
+                                        "color": "black",
+                                        "left": "44.5%",
+                                        "top": "72%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bar",
+                                    "style": {
+                                        "left": "42%",
+                                        "top": "65%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.dining",
+                                    "style": {
+                                        "left": "45.5%",
+                                        "top": "84.5%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.hall",
+                                    "style": {
+                                        "left": "56.5%",
+                                        "top": "41%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.corner",
+                                    "style": {
+                                        "left": "90%",
+                                        "top": "89%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.litter_box_2",
+                                    "state_image": {
+                                        "closed": "/local/clean_closed.png",
+                                        "open": "/local/clean_open.png"
+                                    },
+                                    "style": {
+                                        "left": "89.5%",
+                                        "top": "84%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "light.far_corner_2",
+                                    "style": {
+                                        "left": "90%",
+                                        "top": "55%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "group.rt_ac1200",
+                                    "icon": "mdi:wifi",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "65%",
+                                        "top": "54%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "media_player.yamaha_receiver",
+                                    "icon": "mdi:audio-video",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "69.5%",
+                                        "top": "55%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "remote.living_room_hub",
+                                    "icon": "mdi:remote",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "73%",
+                                        "top": "55%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "media_player.michael_s_2nd_echo_dot",
+                                    "icon": "mdi:amazon-alexa",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "76.5%",
+                                        "top": "55%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "media_player.playstation_4",
+                                    "icon": "mdi:playstation",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "80%",
+                                        "top": "55%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "media_player.apartment_3",
+                                    "icon": "mdi:apple",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "83.5%",
+                                        "top": "55%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "sensor.fridge",
+                                    "state_image": {
+                                        "closed": "/local/fridge_closed2.png",
+                                        "open": "/local/fridge_open2.png"
+                                    },
+                                    "style": {
+                                        "left": "24%",
+                                        "top": "44.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "sensor.freezer",
+                                    "state_image": {
+                                        "closed": "/local/freezer_closed2.png",
+                                        "open": "/local/freezer_open2.png"
+                                    },
+                                    "style": {
+                                        "left": "24%",
+                                        "top": "44.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "sensor.freezer_temperature_sensor",
+                                    "hold_action": "more-info",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "32.5%",
+                                        "top": "30.5%"
+                                    },
+                                    "tap_action": "more-info",
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "sensor.august",
+                                    "icon": "mdi:cctv",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "38%",
+                                        "top": "47%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "light.bathroom_1",
+                                    "style": {
+                                        "left": "43%",
+                                        "top": "15%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bathroom_2",
+                                    "style": {
+                                        "left": "43%",
+                                        "top": "20%"
+                                    },
+                                    "tap_action": "toggle",
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bathroom_3",
+                                    "style": {
+                                        "left": "43%",
+                                        "top": "25%"
+                                    },
+                                    "tap_action": "toggle",
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "media_player.mike_s_bathroom_dot",
+                                    "icon": "mdi:amazon-alexa",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "49%",
+                                        "top": "21%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_motion_all",
+                                    "style": {
+                                        "color": "black",
+                                        "left": "48.5%",
+                                        "top": "27.5%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_motion_temp",
+                                    "hold_action": "more-info",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "53.5%",
+                                        "top": "29%"
+                                    },
+                                    "tap_action": "more-info",
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "sensor.bedroom_temperature_sensor",
+                                    "hold_action": "more-info",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "76%",
+                                        "top": "37.5%"
+                                    },
+                                    "tap_action": "more-info",
+                                    "type": "state-label"
+                                },
+                                {
+                                    "entity": "media_player.michael_s_living_room_dot",
+                                    "icon": "mdi:amazon-alexa",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "89.5%",
+                                        "top": "16%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "light.bed_right",
+                                    "style": {
+                                        "left": "89.5%",
+                                        "top": "10.5%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bed_left",
+                                    "style": {
+                                        "left": "67.5%",
+                                        "top": "10.5%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bed_left",
+                                    "style": {
+                                        "left": "77%",
+                                        "top": "31%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "sensor.bedroom_motion_all",
+                                    "style": {
+                                        "color": "black",
+                                        "left": "67.5%",
+                                        "top": "36%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.bed_left",
+                                    "style": {
+                                        "left": "90%",
+                                        "top": "47%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "media_player.bedroom",
+                                    "icon": "mdi:google-home",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "73%",
+                                        "top": "47%"
+                                    },
+                                    "type": "icon"
+                                },
+                                {
+                                    "entity": "media_player.michael_s_fire_tv",
+                                    "icon": "mdi:amazon",
+                                    "style": {
+                                        "color": "#44739e",
+                                        "font-weight": "bold",
+                                        "left": "76.5%",
+                                        "top": "47%"
+                                    },
+                                    "type": "icon"
+                                }
+                            ],
+                            "image": "/local/floorplan7.png",
+                            "panel": true,
+                            "scale": "65%",
+                            "type": "picture-elements"
+                        }
+                    ],
+                    "icon": "mdi:home-assistant",
+                    "id": "floorplan",
+                    "panel": true,
+                    "theme": "dark-mode",
+                    "title": "Floorplan"
+                },
+                {
+                    "cards": [
+                        {
+                            "entity": "climate.honeywell_home_thermostat",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "media_player.apartment_3",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "lock.august_smart_lock_pro"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "August Smart Lock",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.michael_s_2nd_echo_dot",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "group.living_room_lights",
+                                "group.late_lights",
+                                "group.right_side_lights"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Living Room Lights",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.living_room_multi_humid",
+                                "sensor.living_room_multi_lume",
+                                "sensor.living_room_multi_motion",
+                                "sensor.living_room_multi_temp"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Living Room Multi Sensor",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.playstation_4",
+                            "type": "media-control"
+                        }
+                    ],
+                    "id": "home",
+                    "show_header_toggle": true,
+                    "title": "Home"
+                },
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.bathroom_multi_humid",
+                                "sensor.bathroom_multi_lume",
+                                "sensor.bathroom_multi_temp"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bathroom Multi Sensor",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.bathroom_1",
+                                "light.bathroom_2",
+                                "light.bathroom_3"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bathroom Lights",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.bathroom_motion_all"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bathroom Motion All",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "binary_sensor.bathroom_motion_motion"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bathroom Motion Main",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.shower_motion_motion"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Shower Motion",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "group.bathroom_lights"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bathroom Lights",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.mike_s_bathroom_dot",
+                            "type": "media-control"
+                        }
+                    ],
+                    "id": "bathroom",
+                    "show_header_toggle": true,
+                    "title": "Bathroom"
+                },
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.fridge",
+                                "sensor.freezer",
+                                "sensor.freezer_temperature_sensor"
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "id": "kitchen",
+                    "show_header_toggle": true,
+                    "title": "Kitchen"
+                },
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                "light.bedroom",
+                                "sensor.bedroom_motion_all",
+                                "sensor.bedroom_temperature_sensor"
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.michael_s_living_room_dot",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.michael_s_fire_tv",
+                            "type": "media-control"
+                        }
+                    ],
+                    "id": "bedroom",
+                    "show_header_toggle": true,
+                    "title": "Bedroom"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
