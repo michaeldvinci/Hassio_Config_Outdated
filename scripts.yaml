@@ -1,0 +1,4 @@
+empty_log:
+  alias: Clear log HA
+  sequence: 
+    - service: shell_command.clear_log

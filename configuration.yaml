@@ -9,21 +9,31 @@ homeassistant:
 
 frontend:
 
-config: 
+config:
 
-lyric:
-  client_id: secret! honeywell_client_key
-  client_secret: secret! honeywell_client_secret
+system_health:
+
+# lyric:
+#   client_id: !secret honeywell_client_key
+#   client_secret: !secret honeywell_client_secret
     
 remote:
   - platform: harmony
     name: Living_Room_Hub
-    host: 192.168.50.33
+    host: 192.168.50.180
+    
+alexa_media:
+  accounts:
+    - email: !secret amazon_email
+      password: !secret amazon_pass
+      url: amazon.com
     
 http:
   api_password: !secret api_password
   ip_ban_enabled: False
-  base_url: http://conedmiro.duckdns.org:8123
+  base_url: https://conedmiro.duckdns.org
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 updater:
 
@@ -41,11 +51,15 @@ panel_iframe:
   configurator:
     title: "Configurator"
     icon: mdi:wrench
-    url: http://192.168.50.13:3218
+    url: https://192.168.50.13:3218
+  ide:
+    title: "IDE"
+    icon: mdi:code-braces
+    url: https://192.168.50.13:8321
   logger:
     title: "Logger"
     icon: mdi:card-text-outline
-    url: http://192.168.50.13:4277
+    url: https://192.168.50.13:4277
   nodered:
     title: "Node-Red"
     icon: mdi:sitemap
@@ -68,6 +82,14 @@ discovery:
 logger:
   default: info
   
+# switch:
+#   - platform: mytuya
+#     host: 192.168.150.135
+#     local_key: 24962f572bfb6ed6
+#     device_id: 10017743840d8e800b81
+#     name: Diffuser
+#     id: 1
+    
 conversation:
 
 cloud:
@@ -77,5 +99,5 @@ light: !include light.yaml
 sensor: !include sensor.yaml
 
 group: !include groups.yaml
-# automation: !include automations.yaml
-script: !include_dir_merge_named scripts/
+shell_command: !include_dir_named shell/
+script: !include scripts.yaml

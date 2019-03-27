@@ -89,22 +89,10 @@ late_lights:
     - light.corner
     - light.hall
 
-mikes_iphone:
-  name: iPhone XS
-  entities:
-    - device_tracker.michaels_iphone
-    - sensor.michaels_iphone_battery_level
-    - sensor.michaels_iphone_battery_state
-
 fridge:
   name: Fridge
   entities:
     - sensor.fridge
     - sensor.freezer
     - sensor.freezer_temperature_sensor
-    
-august:
-  name: August Smart Lock
-  entities:
-    - sensor.august
     
