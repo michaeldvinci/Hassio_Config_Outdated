@@ -16,6 +16,7 @@
 !*.png
 !*.gif
 !.storage/lovelace
+!images/*
 
 # Ignore folders.
 .storage
